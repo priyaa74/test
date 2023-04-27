@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input id="email" type="email" placeholder="Enter email">
+        <input id="createPwd" type="password" placeholder="Create password">
+        <input id="submit" type="submit" value="Submit">
+        <div id="pwdStrength"></div>
+    </form>
+</body>
+<script>
+document.querySelector("#submit").addEventListener('click',passwordStrength)
+function passwordStrength(e){
+e.preventDefault();
+let div= document.querySelector("#pwdStrength");
+
+div.textContent= strength();
+}
+
+function strength(){
+var createPassword= document.querySelector("#createPwd").value;
+console.log(createPassword);
+var count=0;
+if(createPassword.match(/[a-z]/)){
+    count++;
+}
+if(createPassword.match(/[A-Z]/)){
+    count++;
+}
+if(createPassword.match(/\d/)){
+    count++;
+}
+// if(createPassword.match(/[~`!@#$%^&*()\-_=+[\]{}|;:'",.<>/?]/)){
+//     count++;
+// }
+if(createPassword.match(/[\W_]/)){
+    count++;
+}
+if(createPassword.length>=8){
+    count++;
+}
+console.log(count);
+switch(count){
+    case 0:
+        case 1:
+            case 2:
+                return "Password is weak!"
+                case 3:
+                    case 4:
+                        return "Password is Moderate"
+                        case 5:
+                            return "Password is Strong"
+}
+}
+</script>
+</html>
