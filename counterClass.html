@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CounterUsingClasses</title>
+</head>
+<body >
+    <div style="background-color: skyblue; height: 300px; width: 40%; margin: auto; margin-top: 200px; " >
+       <div style=" background-color: white; width: 80%; height: 50%; margin: auto;">
+        <p style="width: 40%; height: 30px; color: white; background-color: black;" id="counter">0</p>
+        <button id="startStop">Start</button>
+        <button id="inc" >Increment</button>
+        <button id="dec" >Decrement</button>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+class Counter{
+    constructor(){
+        this.count = 0;
+        this.interval = null;
+        this.autoIncrement = true;
+
+        this.counterDisplay= document.getElementById('counter');
+
+        this.startStopButton= document.getElementById('startStop');
+        this.startStopButton.addEventListener('click',this.handleStartStop.bind(this));
+        
+        this.incrementButton= document.getElementById('inc');
+        this.incrementButton.addEventListener('click',this.handleIncrement.bind(this));
+
+        this.decrementButton= document.getElementById('dec');
+        this.decrementButton.addEventListener('click',this.handleDecrement.bind(this));
+    }
+    handleStartStop(){
+        if(this.interval){
+            clearInterval(this.interval);
+            this.interval=null;
+            this.startStopButton.innerText='Start';
+            this.autoIncrement= true;
+        }else{
+            this.interval= setInterval(()=>{
+                if(this.autoIncrement){
+                    this.increment();
+                }
+            },1000);
+            this.startStopButton.innerText='Stop';
+        }
+    }
+
+    handleIncrement(){
+    this.autoIncrement= false;
+    this.increment();
+    }
+
+    handleDecrement(){
+        this.autoIncrement= false;
+        this.decrement();
+    }
+
+    increment(){
+        this.count++;
+        this.counterDisplay.innerText= this.count;
+    }
+
+    decrement(){
+        this.count--;
+        this.counterDisplay.innerText=this.count;
+    }
+}
+const counter= new Counter();
+</script>
