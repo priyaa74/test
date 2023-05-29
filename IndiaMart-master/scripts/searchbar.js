@@ -6,8 +6,8 @@ async function getData() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '05bea23c7bmsh6430f34a47559fep1db096jsna3dd413b8d1f',
-      'X-RapidAPI-Host': 'amazon24.p.rapidapi.com'
+      // 'X-RapidAPI-Key': '05bea23c7bmsh6430f34a47559fep1db096jsna3dd413b8d1f',
+      // 'X-RapidAPI-Host': 'amazon24.p.rapidapi.com'
     }
   };
 

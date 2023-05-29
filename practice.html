@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: grid; grid-template-columns: repeat(2,1fr); background-color: brown; width: 50%; height: 50vh; gap: 10px;">
+    <div class="div" id="div1" onclick=toggleBackground1() ></div>
+    <div class="div"  id="div2" onclick= toggleBackground2() ></div>
+    <div class="div"  id="div3" onclick= toggleBackground3() ></div>
+    <div class="div"  id="div4" onclick= toggleBackground4()  ></div>
+    </div>
+</body>
+<script>
+
+function toggleBackground1(){
+ var div1 = document.querySelector('#div1');
+ if(div1.style.backgroundColor == 'red')
+ div1.style.backgroundColor = 'green';
+ else
+ div1.style.backgroundColor = 'red';
+}
+function toggleBackground2(){
+    var div1 = document.querySelector('#div2');
+ if(div1.style.backgroundColor == 'red')
+ div1.style.backgroundColor = 'green';
+ else
+ div1.style.backgroundColor = 'red';
+}
+function toggleBackground3(){
+    var div1 = document.querySelector('#div3');
+ if(div1.style.backgroundColor == 'red')
+ div1.style.backgroundColor = 'green';
+ else
+ div1.style.backgroundColor = 'red';
+}
+function toggleBackground4(){
+    var div1 = document.querySelector('#div4');
+ if(div1.style.backgroundColor == 'red')
+ div1.style.backgroundColor = 'green';
+ else
+ div1.style.backgroundColor = 'red';
+}
+</script>
+</html>
