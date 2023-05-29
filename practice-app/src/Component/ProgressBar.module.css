@@ -1,0 +1,11 @@
+.bigBox{
+    height: 20;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50;
+    margin: 50;
+}
+.filler{
+    height: 100%;
+    width: ;
+}

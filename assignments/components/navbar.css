@@ -1,0 +1,29 @@
+*
+{
+    box-sizing: border-box;
+}
+#homenavbar
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    margin-bottom: 20px;
+  
+}
+#homenavbar a
+{
+    text-decoration: none;
+    font-size: larger;
+    margin: 10px;
+    color: black;
+}   
+#homenavbar button
+{
+    background-color: brown;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 8px;
+    border:none;
+}
+

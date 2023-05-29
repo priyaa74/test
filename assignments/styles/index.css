@@ -1,0 +1,35 @@
+#search-bar
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+h1
+{
+    text-align: center;
+}
+input
+{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+#content
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    text-align: center;
+}
+#content img
+{
+    width: 100%;
+}
+#content p
+{
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}

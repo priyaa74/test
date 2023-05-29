@@ -1,0 +1,27 @@
+#onereceipe
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+#onereceipe div
+{
+    width: 30%;
+
+    text-align: center;
+}
+#onereceipe img
+{
+    width: 100%;
+
+}
+#onereceipe p
+{
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+h2
+{
+    text-align: center;
+}
